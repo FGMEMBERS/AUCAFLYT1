@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <name>announcement</name>
+  <layout>vbox</layout>
+
+
+  <text>
+    <label>Announcement</label>
+  </text>
+
+  <hrule/>
+
+  <group>
+    <layout>vbox</layout>
+    <halign>center</halign>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Welcome</label>
+      <property>sim/sound/welcome</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/welcome</property>
+      </binding>
+    </checkbox>
+	<checkbox>
+      <halign>left</halign>
+      <label>Takeoff</label>
+      <property>sim/sound/takeoff</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/takeoff</property>
+      </binding>
+    </checkbox>
+<checkbox>
+      <halign>left</halign>
+      <label>Descent</label>
+      <property>sim/sound/descent</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/descent</property>
+      </binding>
+    </checkbox>
+
+<checkbox>
+      <halign>left</halign>
+      <label>Arrival</label>
+      <property>sim/sound/arrival</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/arrival</property>
+      </binding>
+    </checkbox>
+<checkbox>
+      <halign>left</halign>
+      <label>IPA</label>
+      <property>sim/sound/ipa</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/ipa</property>
+      </binding>
+    </checkbox>
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <legend>Close</legend>
+      <default>true</default>
+      <key>Esc</key>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
+
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+</PropertyList>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PropertyList>
+  <path>aucaflyt1.ac</path>
+<!--GEAR-->
+<!--Wheel steer animation-->
+    <animation>
+    <type>rotate</type>
+    <object-name>wheelF</object-name>
+    <object-name>fairing</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>40</factor>
+    <center>
+      <x-m> -2.8355 </x-m>
+      <z-m> -0.4235</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+  <animation>
+   <type>translate</type>
+   <object-name>gearF1</object-name>
+   <object-name>fairing</object-name>
+   <object-name>wheelF</object-name>
+   <property>gear/gear[0]/compression-m</property>
+   <factor>1</factor>
+   <axis>
+     <x>0.2</x>
+     <y>0</y>
+     <z>1.0</z>
+   </axis>
+ </animation>
+  <animation>
+   <type>translate</type>
+   <object-name>fairingL</object-name>
+   <object-name>wheelL</object-name>
+   <property>gear/gear[1]/compression-m</property>
+   <factor>1</factor>
+   <axis>
+     <x>-0.1</x>
+     <y>0</y>
+     <z>1.0</z>
+   </axis>
+ </animation>
+  <animation>
+   <type>translate</type>
+   <object-name>fairingR</object-name>
+   <object-name>wheelR</object-name>
+   <property>gear/gear[2]/compression-m</property>
+   <factor>1</factor>
+   <axis>
+     <x>-0.1</x>
+     <y>0</y>
+     <z>1.0</z>
+   </axis>
+ </animation>
+<!-- Wheel roll animation-->
+  <animation>
+    <type>spin</type>
+    <object-name>wheelF</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 10 </factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  <center>
+      <x-m> -2.90858 </x-m>
+      <z-m> -0.89622</z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheelL</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 10 </factor>
+  <center>
+      <x-m> -0.77944</x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>-0.89622</z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y> -1.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+  <animation>
+    <type>spin</type>
+    <object-name>wheelR</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor> 10 </factor>
+  <center>
+      <x-m> -0.77944</x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>-0.89622</z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y> -1.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+<animation>
+ <type>material</type>
+ <object-name>T1_Screen</object-name>
+ <emission>
+  <red>0.0</red>
+  <green>1.0</green>
+  <blue>4.0</blue>
+  <factor-prop>engines/engine[0]/running</factor-prop>
+ </emission>
+</animation>
+<animation>
+ <type>material</type>
+ <object-name>T1_Brake</object-name>
+ <emission>
+  <red>1.0</red>
+  <green>0.0</green>
+  <blue>0.0</blue>
+  <factor-prop>/controls/gear/brake-parking</factor-prop>
+ </emission>
+</animation>
+<effect>
+ <inherits-from>Effects/model-transparent</inherits-from>
+ <object-name>T1_Screen</object-name>
+</effect>
+<effect>
+		<inherits-from>Aircraft/AUCAFLYT1/Models/Effects/AUCAFLYT1</inherits-from>
+		<object-name>T1_Body</object-name>
+		<object-name>T1_Chrome</object-name>
+		<object-name>fairing</object-name>
+		<object-name>fairingL</object-name>
+		<object-name>fairingR</object-name>
+		<object-name>T1_Motor</object-name>
+	</effect>
+<animation>
+    <type>spin</type>
+    <object-name>T1_Motor</object-name>
+<property>engines/engine[0]/rpm</property>
+<factor> 0.1 </factor>
+  <center>
+      <x-m> -2.34506</x-m>
+      <y-m>  -0.00012 </y-m>
+      <z-m>0.00343</z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y> -1.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+  </PropertyList>

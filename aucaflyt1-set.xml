@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim>
+
+       <description>Aucafly T1</description>
+    <author>Aucafly, D-ECHO</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">aucaflyt1-yasim</aero>
+
+    <startup>
+      <splash-texture>Aircraft/AUCAFLYT1/splash.png</splash-texture>
+    </startup>
+
+ <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">0.295</x-offset-m><!--blender y-->
+     <y-offset-m archive="y">0.8</y-offset-m><!-- blender z-->
+     <z-offset-m archive="y">-0.71797</z-offset-m><!-- blender x -->
+     <pitch-offset-deg>-15</pitch-offset-deg>
+   </config>
+</view>
+ <sound>
+            <path archive="y">Sounds/aucafly-sound.xml</path>
+        </sound>
+<menubar>
+		<default>
+		<menu n="10">
+			<label>AUCAFLY</label>
+			<enabled type="bool">true</enabled>
+			<item>
+			<name>Announcement</name>
+			<label>Announcement</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 var announcement = gui.Dialog.new("sim/gui/dialogs/announcement/dialog", "Aircraft/AUCAFLYT1/Sounds/aucafly-announcement.xml");
+				 announcement.open();
+				</script>
+			</binding>
+		</item>
+		</menu>
+		</default>
+	</menubar>
+
+    <model>
+      <path archive="y">Models/aucaflyt1.xml</path>
+          </model>
+
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.25 </setting> <!-- 15 deg -->
+      <setting> 0.7 </setting> <!-- 60 deg -->
+    </flaps>
+
+  </sim>
+
+<controls>
+<gear>
+<brake-parking>1</brake-parking></gear>
+     <electric>
+      <battery-switch>0</battery-switch>
+</electric>
+</controls>
+<input>
+ <keyboard>
+  <key n="127">
+   <name>Delete</name>
+   <desc>Toggle Reversers</desc>
+   <binding>
+    <command>property-toggle</command>
+    <property>controls/engines/engine[0]/reverser</property>
+   </binding>
+   <binding>
+    <command>property-toggle</command>
+    <property>controls/engines/engine[1]/reverser</property>
+   </binding>
+  </key>
+ </keyboard>
+</input>
+  </PropertyList>
+
