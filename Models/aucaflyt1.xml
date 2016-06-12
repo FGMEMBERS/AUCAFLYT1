@@ -154,5 +154,18 @@
       <z>  0.000 </z>
     </axis>
   </animation>
-
+<!-- Panel -->
+<animation>
+  <object-name>asi</object-name>
+</animation>
+<model>
+  <name>asi</name>
+  <path>Aircraft/AUCAFLYT1/Models/asi.xml</path>
+  <offsets>
+    <x-m>-1</x-m>
+    <y-m>0.4</y-m>
+    <z-m>0.45</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
   </PropertyList>
